@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { TodoItem, TodoItemType } from "./TodoItem";
+import { TodoItemType } from "../schemas/TodoSchema";
+import { TodoItem } from "./TodoItem";
 
 const todos: TodoItemType[] = [
   {

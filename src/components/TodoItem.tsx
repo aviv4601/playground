@@ -1,13 +1,13 @@
 import React from "react";
+import { TodoItemType } from "../schemas/TodoSchema";
 import { AddTodoForm } from "./AddTodoForm";
-
-export type TodoItemType = {
-  id: string;
-  text: string;
-  completed: boolean;
-  createdAt: Date;
-  priority: string;
-};
+// export type TodoItemType = {
+//   id: string;
+//   text: string;
+//   completed: boolean;
+//   createdAt: Date;
+//   priority: string;
+// };
 
 type TodoItemProps = {
   todoItem: TodoItemType;
