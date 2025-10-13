@@ -1,13 +1,5 @@
 import React from "react";
-import { AddTodoForm } from "./AddTodoForm";
-
-export type TodoItemType = {
-  id: string;
-  text: string;
-  completed: boolean;
-  createdAt: Date;
-  priority: string;
-};
+import { TodoItemType } from "../schemas/AddTodoSchema";
 
 type TodoItemProps = {
   todoItem: TodoItemType;
@@ -30,7 +22,6 @@ export const TodoItem = (props: TodoItemProps) => {
       </li>
       <div>
         <button onClick={removeHandler}>Remove</button>
-        <AddTodoForm></AddTodoForm>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { TodoItem, TodoItemType } from "./TodoItem";
-
+import { TodoItemType } from "../schemas/AddTodoSchema";
+import { AddTodoForm } from "./AddTodoForm";
+import { TodoItem } from "./TodoItem";
 const todos: TodoItemType[] = [
   {
     id: "1",
@@ -43,14 +44,24 @@ export const TodoList = () => {
   const [todoList, setTodoList] = useState<TodoItemType[]>(todos);
 
   return (
-    <ul>
-      {todoList.map((todo) => (
-        <TodoItem
-          key={todo.id}
-          todoItem={todo}
+    <>
+      <>
+        <ul>
+          {todoList.map((todo) => (
+            <TodoItem
+              key={todo.id}
+              todoItem={todo}
+              setTodoList={setTodoList}
+            ></TodoItem>
+          ))}
+        </ul>
+      </>
+      <>
+        <AddTodoForm
           setTodoList={setTodoList}
-        ></TodoItem>
-      ))}
-    </ul>
+          todoList={todoList}
+        ></AddTodoForm>
+      </>
+    </>
   );
 };

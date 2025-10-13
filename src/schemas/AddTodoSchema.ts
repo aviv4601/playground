@@ -1,9 +1,11 @@
 import z from "zod";
 
-const AddTodoSchema = z.object({
+export const TodoItemSchema = z.object({
   id: z.string(),
-  text: z.string(),
+  text: z.string().min(2),
   completed: z.boolean(),
   createdAt: z.date(),
-  priority: z.enum(["low", "medium", "high"]),
+  priority: z.string().min(2),
 });
+
+export type TodoItemType = z.infer<typeof TodoItemSchema>;
