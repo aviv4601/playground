@@ -1,7 +1,9 @@
 import React from "react";
 import { TodoItemType } from "../schemas/AddTodoSchema";
+import classes from "./TodoItem.module.css";
+import { Card } from "./UI/Card";
 
-type TodoItemProps = {
+export type TodoItemProps = {
   todoItem: TodoItemType;
   setTodoList: React.Dispatch<React.SetStateAction<TodoItemType[]>>;
 };
@@ -13,16 +15,14 @@ export const TodoItem = (props: TodoItemProps) => {
     });
   };
   return (
-    <div>
-      <li>
-        <div>{props.todoItem.text}</div>
-        <div>{props.todoItem.priority}</div>
-        <div>{props.todoItem.completed}</div>
-        <div>{props.todoItem.createdAt.toDateString()}</div>
-      </li>
-      <div>
-        <button onClick={removeHandler}>Remove</button>
-      </div>
-    </div>
+    <Card>
+      <div>{props.todoItem.text}</div>
+      <div>{props.todoItem.priority}</div>
+      <div>{props.todoItem.completed}</div>
+      <div>{props.todoItem.createdAt.toDateString()}</div>
+      <button onClick={removeHandler} className={classes.button}>
+        Remove
+      </button>
+    </Card>
   );
 };

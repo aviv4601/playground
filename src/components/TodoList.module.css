@@ -1,0 +1,15 @@
+.container {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 150px;
+  gap: 10px;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.AddTodoForm {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}

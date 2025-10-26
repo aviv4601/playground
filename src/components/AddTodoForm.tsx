@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { TodoItemSchema, TodoItemType } from "../schemas/AddTodoSchema";
+import classes from "./AddTodoForm.module.css";
 
 type AddTodoFormProps = {
   todoList: TodoItemType[];
@@ -44,7 +45,7 @@ export const AddTodoForm = (props: AddTodoFormProps) => {
     if (priorityRef.current) priorityRef.current.value = "";
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={classes.form}>
       <h3>Add Todo</h3>
       <div>
         <label htmlFor="text">Add Text</label>

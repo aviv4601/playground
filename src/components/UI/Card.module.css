@@ -1,0 +1,19 @@
+.card {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: aquamarine;
+  border-radius: 10%;
+  /* display: grid;
+  grid-template-rows: repeat(4, auto) min-content;
+  gap: 10px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+
+/* .card button {
+  max-width: 100px;
+  justify-self: center;
+} */
