@@ -6,6 +6,7 @@ import { Card } from "./UI/Card";
 export type TodoItemProps = {
   todoItem: TodoItemType;
   setTodoList: React.Dispatch<React.SetStateAction<TodoItemType[]>>;
+  theme: string;
 };
 
 export const TodoItem = (props: TodoItemProps) => {
@@ -15,7 +16,7 @@ export const TodoItem = (props: TodoItemProps) => {
     });
   };
   return (
-    <Card>
+    <Card theme={props.theme}>
       <div>{props.todoItem.text}</div>
       <div>{props.todoItem.priority}</div>
       <div>{props.todoItem.completed}</div>

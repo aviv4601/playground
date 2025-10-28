@@ -1,7 +1,7 @@
 .card {
   border: 1px solid black;
   padding: 10px;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   border-radius: 10%;
   /* display: grid;
   grid-template-rows: repeat(4, auto) min-content;
@@ -13,6 +13,13 @@
   justify-content: space-between;
 }
 
+.darkMode {
+  background-color: #ec5990;
+}
+
+.lightMode {
+  background-color: aquamarine;
+}
 /* .card button {
   max-width: 100px;
   justify-self: center;
