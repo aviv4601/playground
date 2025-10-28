@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 } */
+
+.lightTheme {
+  color: black;
+  background-color: white;
+  height: 100vh;
+  font-weight: bold;
+}
+
+.darkTheme {
+  color: white;
+  background-color: #081229;
+  font-weight: bold;
+  height: 100vh;
+}

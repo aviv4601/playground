@@ -4,6 +4,9 @@ import { AddTodoForm } from "./AddTodoForm";
 import { TodoItem } from "./TodoItem";
 import classes from "./TodoList.module.css";
 
+type TodoListProps = {
+  theme: string;
+};
 const todos: TodoItemType[] = [
   {
     id: "1",
@@ -133,21 +136,23 @@ const todos: TodoItemType[] = [
   },
 ];
 
-export const TodoList = () => {
+export const TodoList = ({ theme }: TodoListProps) => {
   const [todoList, setTodoList] = useState<TodoItemType[]>(todos);
 
   return (
-    <div>
+    <>
+      {" "}
       <ul className={classes.container}>
         {todoList.map((todo) => (
           <TodoItem
+            theme={theme}
             key={todo.id}
             todoItem={todo}
             setTodoList={setTodoList}
           ></TodoItem>
         ))}
-      </ul>{" "}
+      </ul>
       <AddTodoForm setTodoList={setTodoList} todoList={todoList}></AddTodoForm>
-    </div>
+    </>
   );
 };
